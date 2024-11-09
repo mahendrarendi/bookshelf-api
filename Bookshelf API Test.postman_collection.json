@@ -65,10 +65,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books",
+					"raw": "http://172.100.10.50:{{port}}/books",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -137,10 +137,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books",
+					"raw": "http://172.100.10.50:{{port}}/books",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -198,10 +198,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books",
+					"raw": "http://172.100.10.50:{{port}}/books",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -259,10 +259,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books",
+					"raw": "http://172.100.10.50:{{port}}/books",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -331,10 +331,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books",
+					"raw": "http://172.100.10.50:{{port}}/books",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -421,10 +421,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books/{{bookId}}",
+					"raw": "http://172.100.10.50:{{port}}/books/{{bookId}}",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -512,10 +512,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books/{{bookIdWithFinishedReading}}",
+					"raw": "http://172.100.10.50:{{port}}/books/{{bookIdWithFinishedReading}}",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -564,10 +564,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books/xxxxx",
+					"raw": "http://172.100.10.50:{{port}}/books/xxxxx",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -609,7 +609,7 @@
 							"});\r",
 							"\r",
 							"pm.test('when get detail books', () => {\r",
-							"    pm.sendRequest(`http://localhost:${pm.environment.get('port')}/books/${pm.environment.get('bookId')}`, (error, response) => {\r",
+							"    pm.sendRequest(`http://172.100.10.50:${pm.environment.get('port')}/books/${pm.environment.get('bookId')}`, (error, response) => {\r",
 							"       const responseJson = response.json();\r",
 							"       const { data: { book} } = responseJson;\r",
 							"\r",
@@ -660,10 +660,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books/{{bookId}}",
+					"raw": "http://172.100.10.50:{{port}}/books/{{bookId}}",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -722,10 +722,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books/{{bookId}}",
+					"raw": "http://172.100.10.50:{{port}}/books/{{bookId}}",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -784,10 +784,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books/{{bookId}}",
+					"raw": "http://172.100.10.50:{{port}}/books/{{bookId}}",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -845,10 +845,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books/xxxxx",
+					"raw": "http://172.100.10.50:{{port}}/books/xxxxx",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -890,7 +890,7 @@
 							"});\r",
 							"\r",
 							"pm.test('when get detail books', () => {\r",
-							"    pm.sendRequest(`http://localhost:${pm.environment.get('port')}/books/${pm.environment.get('bookId')}`, (error, response) => {\r",
+							"    pm.sendRequest(`http://172.100.10.50:${pm.environment.get('port')}/books/${pm.environment.get('bookId')}`, (error, response) => {\r",
 							"       pm.test('The book should be not found', () => {\r",
 							"          pm.expect(response.code).to.equals(404);\r",
 							"       }); \r",
@@ -905,10 +905,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books/{{bookId}}",
+					"raw": "http://172.100.10.50:{{port}}/books/{{bookId}}",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -950,7 +950,7 @@
 							"});\r",
 							"\r",
 							"pm.test('when get detail books', () => {\r",
-							"    pm.sendRequest(`http://localhost:${pm.environment.get('port')}/books/${pm.environment.get('bookIdWithFinishedReading')}`, (error, response) => {\r",
+							"    pm.sendRequest(`http://172.100.10.50:${pm.environment.get('port')}/books/${pm.environment.get('bookIdWithFinishedReading')}`, (error, response) => {\r",
 							"       pm.test('The book should be not found', () => {\r",
 							"          pm.expect(response.code).to.equals(404);\r",
 							"       }); \r",
@@ -965,10 +965,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books/{{bookIdWithFinishedReading}}",
+					"raw": "http://172.100.10.50:{{port}}/books/{{bookIdWithFinishedReading}}",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -1017,10 +1017,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books/xxxxx",
+					"raw": "http://172.100.10.50:{{port}}/books/xxxxx",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -1057,10 +1057,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books",
+					"raw": "http://172.100.10.50:{{port}}/books",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -1096,10 +1096,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books",
+					"raw": "http://172.100.10.50:{{port}}/books",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -1135,10 +1135,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books",
+					"raw": "http://172.100.10.50:{{port}}/books",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -1174,10 +1174,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:{{port}}/books",
+					"raw": "http://172.100.10.50:{{port}}/books",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -1255,10 +1255,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books?reading=1",
+					"raw": "http://172.100.10.50:{{port}}/books?reading=1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -1342,10 +1342,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books?reading=0",
+					"raw": "http://172.100.10.50:{{port}}/books?reading=0",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -1420,10 +1420,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books?finished=1",
+					"raw": "http://172.100.10.50:{{port}}/books?finished=1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -1498,10 +1498,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books?finished=0",
+					"raw": "http://172.100.10.50:{{port}}/books?finished=0",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -1569,12 +1569,12 @@
 							"});\r",
 							"\r",
 							"const deleteAllNotes = () => {\r",
-							"    pm.sendRequest(`http://localhost:${pm.environment.get('port')}/books`, (error, response) => {\r",
+							"    pm.sendRequest(`http://172.100.10.50:${pm.environment.get('port')}/books`, (error, response) => {\r",
 							"        const responseJson = response.json();\r",
 							"        const { data: { books } } = responseJson;\r",
 							"        books.forEach(({ id }) => {\r",
 							"            const deleteRequest = {\r",
-							"                url: `http://localhost:${pm.environment.get('port')}/books/${id}`,\r",
+							"                url: `http://172.100.10.50:${pm.environment.get('port')}/books/${id}`,\r",
 							"                method: 'DELETE',\r",
 							"            };\r",
 							"            pm.sendRequest(deleteRequest, (error, response) => {\r",
@@ -1598,10 +1598,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/books?name=Dicoding",
+					"raw": "http://172.100.10.50:{{port}}/books?name=Dicoding",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172.100.10.50"
 					],
 					"port": "{{port}}",
 					"path": [

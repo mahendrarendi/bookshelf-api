@@ -18,7 +18,6 @@ const addBookHandler = (request, h) => {
     const insertedAt = new Date().toISOString();
     const updatedAt = insertedAt;
 
-    // create new book
     const newBook = {
         id,
         name,
@@ -34,7 +33,6 @@ const addBookHandler = (request, h) => {
         updatedAt,
     };
 
-    // response
     if (!name) {
         return h
             .response({
@@ -43,7 +41,6 @@ const addBookHandler = (request, h) => {
             })
             .code(400);
     }
-    // 2. readPage > pageCount
     if (readPage > pageCount) {
         return h
             .response({
@@ -53,16 +50,11 @@ const addBookHandler = (request, h) => {
             })
             .code(400);
     }
-
-    // push new book to books array
     books.push(newBook);
 
-    // check if book successfully added
     const isSuccess = books.filter((book) => book.id === id).length > 0;
-    // console.log(newBook);
 
     if (isSuccess) {
-        // berhasil
         return h
             .response({
                 status: 'success',
@@ -85,7 +77,7 @@ const getAllBooksHandler = (request, h) => {
     const { name, reading, finished } = request.query;
 
     const filteredBooks = books.filter((book) => {
-        // Filtering berdasarkan query name (non-case sensitive)
+        // Filtering berdasarkan query name 
         const nameMatch = !name || book.name.toLowerCase().includes(name.toLowerCase());
 
         // Filtering berdasarkan query reading
@@ -113,10 +105,8 @@ const getAllBooksHandler = (request, h) => {
 
 const getBookByIdHandler = (request, h) => {
     const { bookId } = request.params;
-    //    search book
+    // search book
     const findBook = books.filter((book) => book.id === bookId)[0];
-
-    // console.log(findBook);
 
     if (findBook !== undefined) {
         return h.response({
@@ -149,8 +139,6 @@ const editBookByIdHandler = (request, h) => {
     const updatedAt = new Date().toISOString();
     const index = books.findIndex((book) => book.id === bookId);
 
-    // gagal
-
     if (!name) {
         return h
             .response({
@@ -170,7 +158,6 @@ const editBookByIdHandler = (request, h) => {
             .code(400);
     }
 
-    // berhasil
     if (index !== -1) {
         books[index] = {
             ...books[index],
@@ -205,8 +192,6 @@ const deleteBookByIdHandler = (request, h) => {
 
     if (index !== -1) {
         books.splice(index, 1);
-        // splice(index, 1) berarti menghapus 1 element dari array
-        // dari index yang ditemukan
 
         return h
             .response({
